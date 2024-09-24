@@ -1,0 +1,40 @@
+beams 4-note directions-001.png 1 
+beams 4-note directions-002.png 4 
+beams 4-note directions-003.png 7 
+beams 4-note directions-004.png 10 
+beams 4-note directions-005.png 18 
+beams 4-note directions-006.png 16 
+beams 4-note directions-007.png 19 
+beams 4-note directions-008.png 22 
+beams 4-note directions-009.png [2, 26]
+beams 4-note directions-010.png 29 
+beams 4-note directions-011.png 382 
+beams 4-note directions-012.png 35 
+beams 4-note directions-013.png 38 
+beams 4-note directions-014.png 41 
+beams 4-note directions-015.png 44 
+beams 4-note directions-016.png 47 
+beams 4-note directions-017.png 1 
+beams 4-note directions-018.png 54 
+beams 4-note directions-019.png 57 
+beams 4-note directions-020.png 60 
+beams 4-note directions-021.png 64 
+beams 4-note directions-022.png 67 
+beams 4-note directions-023.png 70 
+beams 4-note directions-024.png 78 
+beams 4-note directions-025.png 76 
+beams 4-note directions-026.png 79 
+beams 4-note directions-027.png [4, 82]
+beams 4-note directions-028.png 85 
+beams 4-note directions-029.png 89 
+beams 4-note directions-030.png 92 
+beams 4-note directions-031.png [2, 95]
+beams 4-note directions-032.png 98 
+beams 4-note directions-033.png 101 
+beams 4-note directions-034.png 104 
+beams 4-note directions-035.png 107 
+beams 4-note directions-036.png 110 
+beams 4-note directions-037.png [7, 114]
+beams 4-note directions-038.png 117 
+beams 4-note directions-039.png [7, 120]
+beams 4-note directions-040.png 123 

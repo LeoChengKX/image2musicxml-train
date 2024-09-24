@@ -4,6 +4,7 @@ import tqdm
 import numpy as np
 import cv2
 import pytesseract
+import shutil
 
 pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
@@ -14,8 +15,8 @@ xml_path = os.path.join(path, "MusicXML")
 processed_path = os.path.join(path, "Processed")
 measure_path = os.path.join(path, "Measure")
 
-START_WITH = "Bartok - Solo Violin Sonata"
-OUTPUT_FILE_NAME = f"{START_WITH} splits"
+START_WITH = "Bartok - String Quartet 5 mvt"
+OUTPUT_FILE_NAME = rf"splits\{START_WITH}.txt"
 image_files = [f for f in os.listdir(image_path) if f.endswith((".png", ".jpg")) and f.startswith(START_WITH)]
 
 def crop_data():
@@ -120,18 +121,25 @@ def extract_measure_number():
     return measures
 
 
-def save_measure_split(measures: dict):
-    with open("measure_split.txt", mode='w') as f:
-        for key in measures.keys():
-            f.write(key + " ")
-            if len(measures[key]) == 0:
-                f.write("0 ")
-            elif len(measures[key]) == 1:
-                f.write(str(measures[key][0]) + " ")
-            else:
-                f.write(str(measures[key]))
-            f.write("\n")
-    
+def split_measure_split_to_files():
+    if not os.path.exists("splits"):
+        os.makedirs("splits")
+    else:
+        shutil.rmtree("splits")
+        os.makedirs("splits")
+
+    with open("measure_split.txt", "r") as f:
+        for line in f:
+            index = line.rfind("-")
+            if index == -1:
+                print(f"Warning: format not correct for {line}")
+            
+            name = line[:index - 1].strip()
+            with open(os.path.join("splits", name + '.txt'), 'a') as f_w:
+                f_w.write(line)
+
+
 
 if __name__ == '__main__':
+    # split_measure_split_to_files()
     extract_measure_number()
