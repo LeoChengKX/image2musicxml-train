@@ -3,8 +3,11 @@ import os
 import pandas as pd
 import numpy as np
 
+from PIL import Image
+
 
 SPLITS_FOLDER = 'splits'
+IMAGE_FOLDER = 'Images'
 
 ### Dictionary with piece name as key and dataframe of pages and labeled starting measures as values
 pieces = {}
@@ -73,20 +76,23 @@ faulty_df = gen_faulty_df(pieces)
 print(faulty_df)
 
 
-
 ### Helper to show current label of a page 
 def current_value(piece_no: int, page_no: int):
     return pieces[faulty_df.loc[piece_no, "Piece"]].loc[page_no, "measure"]
 
 
 ### Prints faulty pages and their respective labelling errors
-def faulty_pages(piece_no: int) -> list:
+def faulty_pages(piece_no: int, show_image: int) -> list:
     print(faulty_df.loc[piece_no, "Faulty_Pages"])
     if str(faulty_df.loc[piece_no, "Faulty_Pages"]).startswith("[") == True:
         for page in faulty_df.loc[piece_no, "Faulty_Pages"]:
             piece_page = pieces[faulty_df.loc[piece_no, "Piece"]].loc[page, "filename"]
             error = issue_reason(page, faulty_df.loc[piece_no, "Piece"])
             print(f"{piece_page}: [{error}], current value: {current_value(piece_no, page)}")
+            if show_image == 1:
+                im = Image.open(os.path.join(IMAGE_FOLDER, piece_page))
+                im.show()
+
 
 
 ### Makes changes to starting measure label
@@ -97,4 +103,10 @@ def change_measure(piece_no: int, page_no: int, measure_change: int) -> None:
     change_df["measure"] = change_df["measure"].astype(str)
     change_df.to_csv(os.path.join(SPLITS_FOLDER, change_target), index=False)
 
-change_measure()
+
+faulty_pages(24, 1)
+change_measure(24, 4, 10)
+
+
+
+
