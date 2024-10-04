@@ -25,10 +25,9 @@ def issue_no(row: int, filename: str) -> int:
         return 1
     elif str(pieces[filename].loc[row, 'measure']) == "1" and row != 0:
         return 2
-    # elif ("3" in str(pieces[filename].loc[i, 'measure']) or \
-    #       "8" in str(pieces[filename].loc[i, 'measure'])) and i != 0:
-    #     return 3
-    #     print(f"{pieces[filename].loc[i, 'filename']} might display 3 and 8 issues")
+    elif ("3" in str(pieces[filename].loc[row, 'measure']) or \
+          "8" in str(pieces[filename].loc[row, 'measure'])) and row != 0:
+        return 3
 
 
 ### Helper to identify issue in words
@@ -39,8 +38,8 @@ def issue_reason(page: int, filename: str) -> str:
         return "List Error"
     if issue_no(page, filename) == 2:
         return "1 Error"
-    # if issue_no(row, filename) == 3:
-    #     return "3/8 Error"
+    if issue_no(page, filename) == 3:
+        return "3/8 Error"
 
 
 
@@ -104,9 +103,6 @@ def change_measure(piece_no: int, page_no: int, measure_change: int) -> None:
     change_df.to_csv(os.path.join(SPLITS_FOLDER, change_target), index=False)
 
 
-faulty_pages(24, 1)
-change_measure(24, 4, 10)
-
-
-
+# faulty_pages(33, 0)
+# change_measure(33, 41, 51)
 
