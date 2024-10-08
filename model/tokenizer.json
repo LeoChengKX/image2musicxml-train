@@ -1,0 +1,2016 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [],
+  "normalizer": {
+    "type": "Sequence",
+    "normalizers": [
+      {
+        "type": "NFD"
+      }
+    ]
+  },
+  "pre_tokenizer": null,
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": "[UNK]",
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "\n": 0,
+      "\r": 1,
+      " ": 2,
+      "\"": 3,
+      "-": 4,
+      "/": 5,
+      "0": 6,
+      "1": 7,
+      "2": 8,
+      "3": 9,
+      "4": 10,
+      "5": 11,
+      "6": 12,
+      "7": 13,
+      "8": 14,
+      "9": 15,
+      "<": 16,
+      "=": 17,
+      ">": 18,
+      "A": 19,
+      "B": 20,
+      "C": 21,
+      "D": 22,
+      "E": 23,
+      "F": 24,
+      "G": 25,
+      "a": 26,
+      "b": 27,
+      "c": 28,
+      "d": 29,
+      "e": 30,
+      "f": 31,
+      "g": 32,
+      "h": 33,
+      "i": 34,
+      "j": 35,
+      "k": 36,
+      "l": 37,
+      "m": 38,
+      "n": 39,
+      "o": 40,
+      "p": 41,
+      "q": 42,
+      "r": 43,
+      "s": 44,
+      "t": 45,
+      "u": 46,
+      "v": 47,
+      "w": 48,
+      "y": 49,
+      "  ": 50,
+      "    ": 51,
+      "\r\n": 52,
+      "        ": 53,
+      "</": 54,
+      "e>": 55,
+      "st": 56,
+      "ste": 57,
+      "ta": 58,
+      "ch": 59,
+      "at": 60,
+      "ur": 61,
+      "          ": 62,
+      "on": 63,
+      "ion": 64,
+      "      ": 65,
+      "ot": 66,
+      "pe>": 67,
+      "ty": 68,
+      "type>": 69,
+      "sta": 70,
+      "f>": 71,
+      "ff>": 72,
+      "it": 73,
+      "staff>": 74,
+      "ion>": 75,
+      "<ste": 76,
+      "ce>": 77,
+      "cta": 78,
+      "dur": 79,
+      "ice>": 80,
+      "m>": 81,
+      "not": 82,
+      "octa": 83,
+      "oice>": 84,
+      "p>": 85,
+      "pit": 86,
+      "ve>": 87,
+      "voice>": 88,
+      "</ste": 89,
+      "ch>": 90,
+      "ation>": 91,
+      "duration>": 92,
+      "note>": 93,
+      "octave>": 94,
+      "pitch>": 95,
+      "te": 96,
+      "ter": 97,
+      "ar": 98,
+      "<staff>": 99,
+      "qu": 100,
+      "</staff>": 101,
+      "arter": 102,
+      "quarter": 103,
+      "<type>": 104,
+      "<voice>": 105,
+      "<duration>": 106,
+      "<note>": 107,
+      "<octave>": 108,
+      "<pitch>": 109,
+      "</type>": 110,
+      "</voice>": 111,
+      "</duration>": 112,
+      "</note>": 113,
+      "</octave>": 114,
+      "</pitch>": 115,
+      "<stem>": 116,
+      "<step>": 117,
+      "</stem>": 118,
+      "</step>": 119,
+      "ac": 120,
+      "en": 121,
+      "ci": 122,
+      "den": 123,
+      "tal": 124,
+      "acci": 125,
+      "dental": 126,
+      "accidental": 127,
+      "or": 128,
+      "ord": 129,
+      " /": 130,
+      " />": 131,
+      "<ch": 132,
+      "ord />": 133,
+      "<chord />": 134,
+      "accidental>": 135,
+      "up": 136,
+      "al": 137,
+      "ter>": 138,
+      "alter>": 139,
+      "</accidental>": 140,
+      "s>": 141,
+      "<accidental>": 142,
+      "do": 143,
+      "wn": 144,
+      "down": 145,
+      "<alter>": 146,
+      "</alter>": 147,
+      "di": 148,
+      "me": 149,
+      "tr": 150,
+      "as": 151,
+      "bu": 152,
+      "is": 153,
+      "ibu": 154,
+      "vis": 155,
+      "attr": 156,
+      "ions>": 157,
+      "tes>": 158,
+      "divis": 159,
+      "meas": 160,
+      "ibutes>": 161,
+      "attributes>": 162,
+      "divisions>": 163,
+      "measur": 164,
+      "fl": 165,
+      "flat": 166,
+      "nat": 167,
+      "ural": 168,
+      "natural": 169,
+      "-1": 170,
+      "=\"": 171,
+      "\">": 172,
+      "be": 173,
+      "har": 174,
+      "shar": 175,
+      "sharp": 176,
+      "nu": 177,
+      " nu": 178,
+      "mbe": 179,
+      "r=\"": 180,
+      " numbe": 181,
+      " number=\"": 182,
+      "<attributes>": 183,
+      "<divisions>": 184,
+      "<measur": 185,
+      "e number=\"": 186,
+      "</attributes>": 187,
+      "</divisions>": 188,
+      "</measur": 189,
+      "<measure number=\"": 190,
+      "</measure>": 191,
+      "tion": 192,
+      "es": 193,
+      "oot": 194,
+      "root": 195,
+      "yes": 196,
+      "=\"yes": 197,
+      "root>": 198,
+      "=\"yes\">": 199,
+      " c": 200,
+      "<accidental": 201,
+      "au": 202,
+      "y=\"yes\">": 203,
+      "ary=\"yes\">": 204,
+      "tionary=\"yes\">": 205,
+      " cau": 206,
+      "<accidental cau": 207,
+      "<accidental cautionary=\"yes\">": 208,
+      "beat": 209,
+      "-type>": 210,
+      "<root>": 211,
+      "</root>": 212,
+      "me>": 213,
+      "<measure number=\"1": 214,
+      "<beat": 215,
+      "ti": 216,
+      "</beat": 217,
+      "<measure number=\"2": 218,
+      "<measure number=\"3": 219,
+      "time>": 220,
+      "<measure number=\"4": 221,
+      "1\">": 222,
+      "3\">": 223,
+      "5\">": 224,
+      "<time>": 225,
+      "ec": 226,
+      "rec": 227,
+      "</time>": 228,
+      "direc": 229,
+      "<beats>": 230,
+      "<beat-type>": 231,
+      "</beats>": 232,
+      "</beat-type>": 233,
+      "6\">": 234,
+      "8\">": 235,
+      "9\">": 236,
+      "-2": 237,
+      "-flat": 238,
+      "0\">": 239,
+      "4\">": 240,
+      "7\">": 241,
+      "flat-flat": 242,
+      "direction": 243,
+      "2\">": 244,
+      "le": 245,
+      "ve": 246,
+      "direction-type>": 247,
+      "12": 248,
+      "ig": 249,
+      "un": 250,
+      "120": 251,
+      " f": 252,
+      "-m": 253,
+      "-un": 254,
+      "<s": 255,
+      "<direction-type>": 256,
+      "bo": 257,
+      "cle": 258,
+      "de>": 259,
+      "er": 260,
+      "ey": 261,
+      "fi": 262,
+      "ft": 263,
+      "hs>": 264,
+      "in": 265,
+      "inu": 266,
+      "key": 267,
+      "lin": 268,
+      "mo": 269,
+      "n>": 270,
+      "ome>": 271,
+      "per": 272,
+      "t-": 273,
+      "te>": 274,
+      "t=\"": 275,
+      "word": 276,
+      "            ": 277,
+      "</direction-type>": 278,
+      "onome>": 279,
+      "ont-": 280,
+      "stave": 281,
+      "it>": 282,
+      "metr": 283,
+      " number=\"1\">": 284,
+      "<measure number=\"6\">": 285,
+      "<measure number=\"8\">": 286,
+      "<measure number=\"13\">": 287,
+      "<measure number=\"15\">": 288,
+      "<measure number=\"19\">": 289,
+      "<measure number=\"10\">": 290,
+      "<measure number=\"17\">": 291,
+      "<measure number=\"21\">": 292,
+      "<measure number=\"23\">": 293,
+      "<measure number=\"25\">": 294,
+      "<measure number=\"28\">": 295,
+      "<measure number=\"31\">": 296,
+      "<measure number=\"39\">": 297,
+      "<measure number=\"34\">": 298,
+      "<measure number=\"4\">": 299,
+      "<measure number=\"43\">": 300,
+      "ign>": 301,
+      " font-": 302,
+      "-minu": 303,
+      "-unit>": 304,
+      "fift": 305,
+      "line>": 306,
+      "mode>": 307,
+      "per-minu": 308,
+      "staves>": 309,
+      "metronome>": 310,
+      "fifths>": 311,
+      "per-minute>": 312,
+      " =": 313,
+      " p": 314,
+      " te": 315,
+      " direc": 316,
+      " 120": 317,
+      "\" />": 318,
+      "\" font-": 319,
+      "\" direc": 320,
+      "-sharp": 321,
+      "<direction": 322,
+      "<cle": 323,
+      "<key": 324,
+      "<word": 325,
+      "<line>": 326,
+      "<mode>": 327,
+      "<staves>": 328,
+      "<metronome>": 329,
+      "<fifths>": 330,
+      "<per-minute>": 331,
+      "aj": 332,
+      "abo": 333,
+      "ble": 334,
+      "d\">": 335,
+      "d te": 336,
+      "em": 337,
+      "eig": 338,
+      "f number=\"1\">": 339,
+      "ht=\"": 340,
+      "lac": 341,
+      "ld\">": 342,
+      "mp": 343,
+      "mal": 344,
+      "maj": 345,
+      "nor": 346,
+      "o=\"": 347,
+      "oun": 348,
+      "sign>": 349,
+      "s font-": 350,
+      "tion>": 351,
+      "uble": 352,
+      "weig": 353,
+      "yle": 354,
+      "</direc": 355,
+      "</cle": 356,
+      "</key": 357,
+      "</word": 358,
+      "</line>": 359,
+      "</mode>": 360,
+      "</staves>": 361,
+      "</metronome>": 362,
+      "</fifths>": 363,
+      "</per-minute>": 364,
+      "</sign>": 365,
+      "style": 366,
+      "ent=\"": 367,
+      "double": 368,
+      "=\"nor": 369,
+      "<measure number=\"5\">": 370,
+      "<measure number=\"9\">": 371,
+      "<measure number=\"7\">": 372,
+      "<measure number=\"1\">": 373,
+      "<measure number=\"11\">": 374,
+      "<measure number=\"16\">": 375,
+      "<measure number=\"18\">": 376,
+      "<measure number=\"14\">": 377,
+      "<measure number=\"12\">": 378,
+      "<beat-unit>": 379,
+      "tive": 380,
+      "</beat-unit>": 381,
+      "<measure number=\"2\">": 382,
+      "<measure number=\"26\">": 383,
+      "<measure number=\"29\">": 384,
+      "<measure number=\"20\">": 385,
+      "<measure number=\"24\">": 386,
+      "<measure number=\"27\">": 387,
+      "<measure number=\"22\">": 388,
+      "<measure number=\"3\">": 389,
+      "<measure number=\"33\">": 390,
+      "<measure number=\"35\">": 391,
+      "<measure number=\"36\">": 392,
+      "<measure number=\"38\">": 393,
+      "<measure number=\"30\">": 394,
+      "<measure number=\"37\">": 395,
+      "<measure number=\"32\">": 396,
+      "<measure number=\"41\">": 397,
+      "<measure number=\"45\">": 398,
+      "<measure number=\"46\">": 399,
+      "<measure number=\"40\">": 400,
+      "<measure number=\"44\">": 401,
+      "<measure number=\"42\">": 402,
+      "ve\" direc": 403,
+      "120\" />": 404,
+      "<sign>": 405,
+      "<soun": 406,
+      "bold\">": 407,
+      " = 120": 408,
+      " plac": 409,
+      "\" font-weig": 410,
+      "<direction plac": 411,
+      "<clef number=\"1\">": 412,
+      "<key number=\"1\">": 413,
+      "<words font-": 414,
+      "above\" direc": 415,
+      "d temp": 416,
+      "ement=\"": 417,
+      "ht=\"bold\">": 418,
+      "mal\" font-weig": 419,
+      "major": 420,
+      "o=\"120\" />": 421,
+      "</direction>": 422,
+      "</clef>": 423,
+      "</key>": 424,
+      "</words>": 425,
+      "style=\"nor": 426,
+      "double-sharp": 427,
+      "tive=\"yes\">": 428,
+      "<sound temp": 429,
+      "<direction placement=\"": 430,
+      "<words font-style=\"nor": 431,
+      "above\" directive=\"yes\">": 432,
+      "mal\" font-weight=\"bold\">": 433,
+      "<sound tempo=\"120\" />": 434,
+      "<direction placement=\"above\" directive=\"yes\">": 435,
+      "<words font-style=\"normal\" font-weight=\"bold\">": 436
+    },
+    "merges": [
+      [
+        " ",
+        " "
+      ],
+      [
+        "  ",
+        "  "
+      ],
+      [
+        "\r",
+        "\n"
+      ],
+      [
+        "    ",
+        "    "
+      ],
+      [
+        "<",
+        "/"
+      ],
+      [
+        "e",
+        ">"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "st",
+        "e"
+      ],
+      [
+        "t",
+        "a"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "u",
+        "r"
+      ],
+      [
+        "        ",
+        "  "
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "i",
+        "on"
+      ],
+      [
+        "    ",
+        "  "
+      ],
+      [
+        "o",
+        "t"
+      ],
+      [
+        "p",
+        "e>"
+      ],
+      [
+        "t",
+        "y"
+      ],
+      [
+        "ty",
+        "pe>"
+      ],
+      [
+        "st",
+        "a"
+      ],
+      [
+        "f",
+        ">"
+      ],
+      [
+        "f",
+        "f>"
+      ],
+      [
+        "i",
+        "t"
+      ],
+      [
+        "sta",
+        "ff>"
+      ],
+      [
+        "ion",
+        ">"
+      ],
+      [
+        "<",
+        "ste"
+      ],
+      [
+        "c",
+        "e>"
+      ],
+      [
+        "c",
+        "ta"
+      ],
+      [
+        "d",
+        "ur"
+      ],
+      [
+        "i",
+        "ce>"
+      ],
+      [
+        "m",
+        ">"
+      ],
+      [
+        "n",
+        "ot"
+      ],
+      [
+        "o",
+        "cta"
+      ],
+      [
+        "o",
+        "ice>"
+      ],
+      [
+        "p",
+        ">"
+      ],
+      [
+        "p",
+        "it"
+      ],
+      [
+        "v",
+        "e>"
+      ],
+      [
+        "v",
+        "oice>"
+      ],
+      [
+        "</",
+        "ste"
+      ],
+      [
+        "ch",
+        ">"
+      ],
+      [
+        "at",
+        "ion>"
+      ],
+      [
+        "dur",
+        "ation>"
+      ],
+      [
+        "not",
+        "e>"
+      ],
+      [
+        "octa",
+        "ve>"
+      ],
+      [
+        "pit",
+        "ch>"
+      ],
+      [
+        "t",
+        "e"
+      ],
+      [
+        "te",
+        "r"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "<",
+        "staff>"
+      ],
+      [
+        "q",
+        "u"
+      ],
+      [
+        "</",
+        "staff>"
+      ],
+      [
+        "ar",
+        "ter"
+      ],
+      [
+        "qu",
+        "arter"
+      ],
+      [
+        "<",
+        "type>"
+      ],
+      [
+        "<",
+        "voice>"
+      ],
+      [
+        "<",
+        "duration>"
+      ],
+      [
+        "<",
+        "note>"
+      ],
+      [
+        "<",
+        "octave>"
+      ],
+      [
+        "<",
+        "pitch>"
+      ],
+      [
+        "</",
+        "type>"
+      ],
+      [
+        "</",
+        "voice>"
+      ],
+      [
+        "</",
+        "duration>"
+      ],
+      [
+        "</",
+        "note>"
+      ],
+      [
+        "</",
+        "octave>"
+      ],
+      [
+        "</",
+        "pitch>"
+      ],
+      [
+        "<ste",
+        "m>"
+      ],
+      [
+        "<ste",
+        "p>"
+      ],
+      [
+        "</ste",
+        "m>"
+      ],
+      [
+        "</ste",
+        "p>"
+      ],
+      [
+        "a",
+        "c"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "c",
+        "i"
+      ],
+      [
+        "d",
+        "en"
+      ],
+      [
+        "ta",
+        "l"
+      ],
+      [
+        "ac",
+        "ci"
+      ],
+      [
+        "den",
+        "tal"
+      ],
+      [
+        "acci",
+        "dental"
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "or",
+        "d"
+      ],
+      [
+        " ",
+        "/"
+      ],
+      [
+        " /",
+        ">"
+      ],
+      [
+        "<",
+        "ch"
+      ],
+      [
+        "ord",
+        " />"
+      ],
+      [
+        "<ch",
+        "ord />"
+      ],
+      [
+        "accidental",
+        ">"
+      ],
+      [
+        "u",
+        "p"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "ter",
+        ">"
+      ],
+      [
+        "al",
+        "ter>"
+      ],
+      [
+        "</",
+        "accidental>"
+      ],
+      [
+        "s",
+        ">"
+      ],
+      [
+        "<",
+        "accidental>"
+      ],
+      [
+        "d",
+        "o"
+      ],
+      [
+        "w",
+        "n"
+      ],
+      [
+        "do",
+        "wn"
+      ],
+      [
+        "<",
+        "alter>"
+      ],
+      [
+        "</",
+        "alter>"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "m",
+        "e"
+      ],
+      [
+        "t",
+        "r"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "b",
+        "u"
+      ],
+      [
+        "i",
+        "s"
+      ],
+      [
+        "i",
+        "bu"
+      ],
+      [
+        "v",
+        "is"
+      ],
+      [
+        "at",
+        "tr"
+      ],
+      [
+        "ion",
+        "s>"
+      ],
+      [
+        "te",
+        "s>"
+      ],
+      [
+        "di",
+        "vis"
+      ],
+      [
+        "me",
+        "as"
+      ],
+      [
+        "ibu",
+        "tes>"
+      ],
+      [
+        "attr",
+        "ibutes>"
+      ],
+      [
+        "divis",
+        "ions>"
+      ],
+      [
+        "meas",
+        "ur"
+      ],
+      [
+        "f",
+        "l"
+      ],
+      [
+        "fl",
+        "at"
+      ],
+      [
+        "n",
+        "at"
+      ],
+      [
+        "ur",
+        "al"
+      ],
+      [
+        "nat",
+        "ural"
+      ],
+      [
+        "-",
+        "1"
+      ],
+      [
+        "=",
+        "\""
+      ],
+      [
+        "\"",
+        ">"
+      ],
+      [
+        "b",
+        "e"
+      ],
+      [
+        "h",
+        "ar"
+      ],
+      [
+        "s",
+        "har"
+      ],
+      [
+        "shar",
+        "p"
+      ],
+      [
+        "n",
+        "u"
+      ],
+      [
+        " ",
+        "nu"
+      ],
+      [
+        "m",
+        "be"
+      ],
+      [
+        "r",
+        "=\""
+      ],
+      [
+        " nu",
+        "mbe"
+      ],
+      [
+        " numbe",
+        "r=\""
+      ],
+      [
+        "<",
+        "attributes>"
+      ],
+      [
+        "<",
+        "divisions>"
+      ],
+      [
+        "<",
+        "measur"
+      ],
+      [
+        "e",
+        " number=\""
+      ],
+      [
+        "</",
+        "attributes>"
+      ],
+      [
+        "</",
+        "divisions>"
+      ],
+      [
+        "</",
+        "measur"
+      ],
+      [
+        "<measur",
+        "e number=\""
+      ],
+      [
+        "</measur",
+        "e>"
+      ],
+      [
+        "t",
+        "ion"
+      ],
+      [
+        "e",
+        "s"
+      ],
+      [
+        "o",
+        "ot"
+      ],
+      [
+        "r",
+        "oot"
+      ],
+      [
+        "y",
+        "es"
+      ],
+      [
+        "=\"",
+        "yes"
+      ],
+      [
+        "root",
+        ">"
+      ],
+      [
+        "=\"yes",
+        "\">"
+      ],
+      [
+        " ",
+        "c"
+      ],
+      [
+        "<",
+        "accidental"
+      ],
+      [
+        "a",
+        "u"
+      ],
+      [
+        "y",
+        "=\"yes\">"
+      ],
+      [
+        "ar",
+        "y=\"yes\">"
+      ],
+      [
+        "tion",
+        "ary=\"yes\">"
+      ],
+      [
+        " c",
+        "au"
+      ],
+      [
+        "<accidental",
+        " cau"
+      ],
+      [
+        "<accidental cau",
+        "tionary=\"yes\">"
+      ],
+      [
+        "be",
+        "at"
+      ],
+      [
+        "-",
+        "type>"
+      ],
+      [
+        "<",
+        "root>"
+      ],
+      [
+        "</",
+        "root>"
+      ],
+      [
+        "m",
+        "e>"
+      ],
+      [
+        "<measure number=\"",
+        "1"
+      ],
+      [
+        "<",
+        "beat"
+      ],
+      [
+        "t",
+        "i"
+      ],
+      [
+        "</",
+        "beat"
+      ],
+      [
+        "<measure number=\"",
+        "2"
+      ],
+      [
+        "<measure number=\"",
+        "3"
+      ],
+      [
+        "ti",
+        "me>"
+      ],
+      [
+        "<measure number=\"",
+        "4"
+      ],
+      [
+        "1",
+        "\">"
+      ],
+      [
+        "3",
+        "\">"
+      ],
+      [
+        "5",
+        "\">"
+      ],
+      [
+        "<",
+        "time>"
+      ],
+      [
+        "e",
+        "c"
+      ],
+      [
+        "r",
+        "ec"
+      ],
+      [
+        "</",
+        "time>"
+      ],
+      [
+        "di",
+        "rec"
+      ],
+      [
+        "<beat",
+        "s>"
+      ],
+      [
+        "<beat",
+        "-type>"
+      ],
+      [
+        "</beat",
+        "s>"
+      ],
+      [
+        "</beat",
+        "-type>"
+      ],
+      [
+        "6",
+        "\">"
+      ],
+      [
+        "8",
+        "\">"
+      ],
+      [
+        "9",
+        "\">"
+      ],
+      [
+        "-",
+        "2"
+      ],
+      [
+        "-",
+        "flat"
+      ],
+      [
+        "0",
+        "\">"
+      ],
+      [
+        "4",
+        "\">"
+      ],
+      [
+        "7",
+        "\">"
+      ],
+      [
+        "flat",
+        "-flat"
+      ],
+      [
+        "direc",
+        "tion"
+      ],
+      [
+        "2",
+        "\">"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "v",
+        "e"
+      ],
+      [
+        "direction",
+        "-type>"
+      ],
+      [
+        "1",
+        "2"
+      ],
+      [
+        "i",
+        "g"
+      ],
+      [
+        "u",
+        "n"
+      ],
+      [
+        "12",
+        "0"
+      ],
+      [
+        " ",
+        "f"
+      ],
+      [
+        "-",
+        "m"
+      ],
+      [
+        "-",
+        "un"
+      ],
+      [
+        "<",
+        "s"
+      ],
+      [
+        "<",
+        "direction-type>"
+      ],
+      [
+        "b",
+        "o"
+      ],
+      [
+        "c",
+        "le"
+      ],
+      [
+        "d",
+        "e>"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "e",
+        "y"
+      ],
+      [
+        "f",
+        "i"
+      ],
+      [
+        "f",
+        "t"
+      ],
+      [
+        "h",
+        "s>"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "i",
+        "nu"
+      ],
+      [
+        "k",
+        "ey"
+      ],
+      [
+        "l",
+        "in"
+      ],
+      [
+        "m",
+        "o"
+      ],
+      [
+        "n",
+        ">"
+      ],
+      [
+        "o",
+        "me>"
+      ],
+      [
+        "p",
+        "er"
+      ],
+      [
+        "t",
+        "-"
+      ],
+      [
+        "t",
+        "e>"
+      ],
+      [
+        "t",
+        "=\""
+      ],
+      [
+        "w",
+        "ord"
+      ],
+      [
+        "        ",
+        "    "
+      ],
+      [
+        "</",
+        "direction-type>"
+      ],
+      [
+        "on",
+        "ome>"
+      ],
+      [
+        "on",
+        "t-"
+      ],
+      [
+        "sta",
+        "ve"
+      ],
+      [
+        "it",
+        ">"
+      ],
+      [
+        "me",
+        "tr"
+      ],
+      [
+        " number=\"",
+        "1\">"
+      ],
+      [
+        "<measure number=\"",
+        "6\">"
+      ],
+      [
+        "<measure number=\"",
+        "8\">"
+      ],
+      [
+        "<measure number=\"1",
+        "3\">"
+      ],
+      [
+        "<measure number=\"1",
+        "5\">"
+      ],
+      [
+        "<measure number=\"1",
+        "9\">"
+      ],
+      [
+        "<measure number=\"1",
+        "0\">"
+      ],
+      [
+        "<measure number=\"1",
+        "7\">"
+      ],
+      [
+        "<measure number=\"2",
+        "1\">"
+      ],
+      [
+        "<measure number=\"2",
+        "3\">"
+      ],
+      [
+        "<measure number=\"2",
+        "5\">"
+      ],
+      [
+        "<measure number=\"2",
+        "8\">"
+      ],
+      [
+        "<measure number=\"3",
+        "1\">"
+      ],
+      [
+        "<measure number=\"3",
+        "9\">"
+      ],
+      [
+        "<measure number=\"3",
+        "4\">"
+      ],
+      [
+        "<measure number=\"4",
+        "\">"
+      ],
+      [
+        "<measure number=\"4",
+        "3\">"
+      ],
+      [
+        "ig",
+        "n>"
+      ],
+      [
+        " f",
+        "ont-"
+      ],
+      [
+        "-m",
+        "inu"
+      ],
+      [
+        "-un",
+        "it>"
+      ],
+      [
+        "fi",
+        "ft"
+      ],
+      [
+        "lin",
+        "e>"
+      ],
+      [
+        "mo",
+        "de>"
+      ],
+      [
+        "per",
+        "-minu"
+      ],
+      [
+        "stave",
+        "s>"
+      ],
+      [
+        "metr",
+        "onome>"
+      ],
+      [
+        "fift",
+        "hs>"
+      ],
+      [
+        "per-minu",
+        "te>"
+      ],
+      [
+        " ",
+        "="
+      ],
+      [
+        " ",
+        "p"
+      ],
+      [
+        " ",
+        "te"
+      ],
+      [
+        " ",
+        "direc"
+      ],
+      [
+        " ",
+        "120"
+      ],
+      [
+        "\"",
+        " />"
+      ],
+      [
+        "\"",
+        " font-"
+      ],
+      [
+        "\"",
+        " direc"
+      ],
+      [
+        "-",
+        "sharp"
+      ],
+      [
+        "<",
+        "direction"
+      ],
+      [
+        "<",
+        "cle"
+      ],
+      [
+        "<",
+        "key"
+      ],
+      [
+        "<",
+        "word"
+      ],
+      [
+        "<",
+        "line>"
+      ],
+      [
+        "<",
+        "mode>"
+      ],
+      [
+        "<",
+        "staves>"
+      ],
+      [
+        "<",
+        "metronome>"
+      ],
+      [
+        "<",
+        "fifths>"
+      ],
+      [
+        "<",
+        "per-minute>"
+      ],
+      [
+        "a",
+        "j"
+      ],
+      [
+        "a",
+        "bo"
+      ],
+      [
+        "b",
+        "le"
+      ],
+      [
+        "d",
+        "\">"
+      ],
+      [
+        "d",
+        " te"
+      ],
+      [
+        "e",
+        "m"
+      ],
+      [
+        "e",
+        "ig"
+      ],
+      [
+        "f",
+        " number=\"1\">"
+      ],
+      [
+        "h",
+        "t=\""
+      ],
+      [
+        "l",
+        "ac"
+      ],
+      [
+        "l",
+        "d\">"
+      ],
+      [
+        "m",
+        "p"
+      ],
+      [
+        "m",
+        "al"
+      ],
+      [
+        "m",
+        "aj"
+      ],
+      [
+        "n",
+        "or"
+      ],
+      [
+        "o",
+        "=\""
+      ],
+      [
+        "o",
+        "un"
+      ],
+      [
+        "s",
+        "ign>"
+      ],
+      [
+        "s",
+        " font-"
+      ],
+      [
+        "t",
+        "ion>"
+      ],
+      [
+        "u",
+        "ble"
+      ],
+      [
+        "w",
+        "eig"
+      ],
+      [
+        "y",
+        "le"
+      ],
+      [
+        "</",
+        "direc"
+      ],
+      [
+        "</",
+        "cle"
+      ],
+      [
+        "</",
+        "key"
+      ],
+      [
+        "</",
+        "word"
+      ],
+      [
+        "</",
+        "line>"
+      ],
+      [
+        "</",
+        "mode>"
+      ],
+      [
+        "</",
+        "staves>"
+      ],
+      [
+        "</",
+        "metronome>"
+      ],
+      [
+        "</",
+        "fifths>"
+      ],
+      [
+        "</",
+        "per-minute>"
+      ],
+      [
+        "</",
+        "sign>"
+      ],
+      [
+        "st",
+        "yle"
+      ],
+      [
+        "en",
+        "t=\""
+      ],
+      [
+        "do",
+        "uble"
+      ],
+      [
+        "=\"",
+        "nor"
+      ],
+      [
+        "<measure number=\"",
+        "5\">"
+      ],
+      [
+        "<measure number=\"",
+        "9\">"
+      ],
+      [
+        "<measure number=\"",
+        "7\">"
+      ],
+      [
+        "<measure number=\"1",
+        "\">"
+      ],
+      [
+        "<measure number=\"1",
+        "1\">"
+      ],
+      [
+        "<measure number=\"1",
+        "6\">"
+      ],
+      [
+        "<measure number=\"1",
+        "8\">"
+      ],
+      [
+        "<measure number=\"1",
+        "4\">"
+      ],
+      [
+        "<measure number=\"1",
+        "2\">"
+      ],
+      [
+        "<beat",
+        "-unit>"
+      ],
+      [
+        "ti",
+        "ve"
+      ],
+      [
+        "</beat",
+        "-unit>"
+      ],
+      [
+        "<measure number=\"2",
+        "\">"
+      ],
+      [
+        "<measure number=\"2",
+        "6\">"
+      ],
+      [
+        "<measure number=\"2",
+        "9\">"
+      ],
+      [
+        "<measure number=\"2",
+        "0\">"
+      ],
+      [
+        "<measure number=\"2",
+        "4\">"
+      ],
+      [
+        "<measure number=\"2",
+        "7\">"
+      ],
+      [
+        "<measure number=\"2",
+        "2\">"
+      ],
+      [
+        "<measure number=\"3",
+        "\">"
+      ],
+      [
+        "<measure number=\"3",
+        "3\">"
+      ],
+      [
+        "<measure number=\"3",
+        "5\">"
+      ],
+      [
+        "<measure number=\"3",
+        "6\">"
+      ],
+      [
+        "<measure number=\"3",
+        "8\">"
+      ],
+      [
+        "<measure number=\"3",
+        "0\">"
+      ],
+      [
+        "<measure number=\"3",
+        "7\">"
+      ],
+      [
+        "<measure number=\"3",
+        "2\">"
+      ],
+      [
+        "<measure number=\"4",
+        "1\">"
+      ],
+      [
+        "<measure number=\"4",
+        "5\">"
+      ],
+      [
+        "<measure number=\"4",
+        "6\">"
+      ],
+      [
+        "<measure number=\"4",
+        "0\">"
+      ],
+      [
+        "<measure number=\"4",
+        "4\">"
+      ],
+      [
+        "<measure number=\"4",
+        "2\">"
+      ],
+      [
+        "ve",
+        "\" direc"
+      ],
+      [
+        "120",
+        "\" />"
+      ],
+      [
+        "<s",
+        "ign>"
+      ],
+      [
+        "<s",
+        "oun"
+      ],
+      [
+        "bo",
+        "ld\">"
+      ],
+      [
+        " =",
+        " 120"
+      ],
+      [
+        " p",
+        "lac"
+      ],
+      [
+        "\" font-",
+        "weig"
+      ],
+      [
+        "<direction",
+        " plac"
+      ],
+      [
+        "<cle",
+        "f number=\"1\">"
+      ],
+      [
+        "<key",
+        " number=\"1\">"
+      ],
+      [
+        "<word",
+        "s font-"
+      ],
+      [
+        "abo",
+        "ve\" direc"
+      ],
+      [
+        "d te",
+        "mp"
+      ],
+      [
+        "em",
+        "ent=\""
+      ],
+      [
+        "ht=\"",
+        "bold\">"
+      ],
+      [
+        "mal",
+        "\" font-weig"
+      ],
+      [
+        "maj",
+        "or"
+      ],
+      [
+        "o=\"",
+        "120\" />"
+      ],
+      [
+        "</direc",
+        "tion>"
+      ],
+      [
+        "</cle",
+        "f>"
+      ],
+      [
+        "</key",
+        ">"
+      ],
+      [
+        "</word",
+        "s>"
+      ],
+      [
+        "style",
+        "=\"nor"
+      ],
+      [
+        "double",
+        "-sharp"
+      ],
+      [
+        "tive",
+        "=\"yes\">"
+      ],
+      [
+        "<soun",
+        "d temp"
+      ],
+      [
+        "<direction plac",
+        "ement=\""
+      ],
+      [
+        "<words font-",
+        "style=\"nor"
+      ],
+      [
+        "above\" direc",
+        "tive=\"yes\">"
+      ],
+      [
+        "mal\" font-weig",
+        "ht=\"bold\">"
+      ],
+      [
+        "<sound temp",
+        "o=\"120\" />"
+      ],
+      [
+        "<direction placement=\"",
+        "above\" directive=\"yes\">"
+      ],
+      [
+        "<words font-style=\"nor",
+        "mal\" font-weight=\"bold\">"
+      ]
+    ]
+  }
+}
