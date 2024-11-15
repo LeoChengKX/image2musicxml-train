@@ -1,7 +1,4 @@
 import torch
 import torch.nn as nn
-import transformers
+from transformers import TFEncoderDecoderModel
 
-class XMLDecoder(nn.Module):
-    def __init__():
-        pass

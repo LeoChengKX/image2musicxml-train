@@ -50,7 +50,7 @@ path = r"..\train_dataset\xml"
 files = os.listdir(path)
 
 tokenizer.train(files=[os.path.join(path, x) for x in files], trainer=trainer)
-encoded = tokenizer.encode("<note>1</note>")
+encoded = tokenizer.encode("<measure number=\"10380\">")
 
 print(encoded.tokens)
 
