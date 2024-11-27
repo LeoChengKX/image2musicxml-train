@@ -14,38 +14,37 @@ image_path = os.path.join(path, "Images")
 xml_path = os.path.join(path, "MusicXML")
 processed_path = os.path.join(path, "Processed")
 measure_path = os.path.join(path, "Measure")
+image_data_path = os.path.join(abs_path, "train_dataset")
 
-START_WITH = "Bartok - String Quartet 5 mvt"
+START_WITH = ""
 OUTPUT_FILE_NAME = rf"splits\{START_WITH}.txt"
 image_files = [f for f in os.listdir(image_path) if f.endswith((".png", ".jpg")) and f.startswith(START_WITH)]
 
 def crop_data():
-    if not os.path.exists(processed_path):
-        os.makedirs(processed_path)
+    if not os.path.exists("train_dataset\\raw"):
+        os.makedirs("train_dataset\\raw")
 
-    for name in os.listdir(image_path)[:5]:
+    for name in tqdm.tqdm(image_files):
         if name.endswith((".png")):
             file_path = os.path.join(image_path, name)
-            with Image.open(file_path) as img:
+            with Image.open(file_path).convert("RGB") as img:
                 w, h = img.size
-                print(name)
-                grayscale_img = img.convert("L")
-            
-                # Apply a threshold to identify black pixels (0 = black, 255 = white)
-                threshold = 1  # Any pixel brighter than black will be considered non-black
-                binary_img = grayscale_img.point(lambda p: p > threshold and 255)
+                img = img.crop((0, 0, w, h-1000))
+                
+                img = np.array(img)
+                # Convert RGB to BGR
+                img = img[:, :, ::-1].copy()
+                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                rows = list(enumerate(gray))
+                rows.reverse()
+                non_zero_index = 0
+                for index, row in rows:
+                    if not np.all(row == 255):
+                        non_zero_index = index
+                        break
+                gray = gray[:non_zero_index + 20, :]
 
-                # Get the bounding box of the non-black region
-                bbox = binary_img.getbbox()
-
-                # If bbox is None, the image is fully black, so no cropping needed
-                if bbox:
-                    cropped_img = img.crop(bbox)
-                    save_path = os.path.join(processed_path, name)
-                    cropped_img.save(save_path)
-
-                # img = img.crop((0, 0, w, h-2500))
-                # img.save(os.path.join(processed_path, name))
+                cv2.imwrite(os.path.join(image_data_path, "raw", name), gray)
 
 
 def correct_data_name(file_name: str):
@@ -121,7 +120,7 @@ def extract_measure_number():
     return measures
 
 
-def split_measure_split_to_files():
+def split_measure_split_to_csv_files():
     if not os.path.exists("splits"):
         os.makedirs("splits")
     else:
@@ -129,17 +128,29 @@ def split_measure_split_to_files():
         os.makedirs("splits")
 
     with open("measure_split.txt", "r") as f:
+
         for line in f:
             index = line.rfind("-")
             if index == -1:
                 print(f"Warning: format not correct for {line}")
             
             name = line[:index - 1].strip()
-            with open(os.path.join("splits", name + '.txt'), 'a') as f_w:
-                f_w.write(line)
+            index = line.rfind("png")
+            if not os.path.isfile(os.path.join("splits", name + '.csv')):
+                with open(os.path.join("splits", name + '.csv'), 'a') as f_w:
+                    f_w.write("filename,measure\n")
 
+            with open(os.path.join("splits", name + '.csv'), 'a') as f_w:
+                f_w.write(line[:index+3] + ',"' + line[index+4:].strip() + '"\n')
+
+
+def split_xml_file():
+    
+    for name in os.listdir("splits"):
+        
 
 
 if __name__ == '__main__':
-    # split_measure_split_to_files()
-    extract_measure_number()
+    # split_measure_split_to_csv_files()
+    # extract_measure_number()
+    crop_data()

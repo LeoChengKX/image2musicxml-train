@@ -1,3 +1,5 @@
+"dcoder.py: Define the customized XML decoder"
+
 import torch
 import torch.nn as nn
 from transformers import PreTrainedModel, PretrainedConfig
@@ -5,8 +7,12 @@ import math
 
 class XMLDecoderConfig(PretrainedConfig):
     """The config class for XML decoder. """
+
+    model_type='xml_decoder'
+    
     def __init__(self, vocab_size=30522, num_hiddens=768, ffn_hidden_size=3072, num_heads=12, max_seq_len=512, num_blks=12, dropout=0.1):
-        super().__init__()
+        super().__init__(vocab_size=vocab_size, num_hiddens=num_hiddens, ffn_hidden_size=ffn_hidden_size, max_seq_len=max_seq_len,
+                         num_blks=num_blks, num_heads=num_heads, dropout=dropout)
 
         self.vocab_size = vocab_size
         self.num_hiddens = num_hiddens
@@ -15,22 +21,26 @@ class XMLDecoderConfig(PretrainedConfig):
         self.max_seq_len = max_seq_len
         self.num_blks = num_blks
         self.dropout = dropout
+        self.model_type = 'xml_decoder'
 
 
 class XMLDecoder(PreTrainedModel):
     """The main class of XMLDecoder, utilizing the XMLDecoderBlocks to build a
         transformer decoder for strcutured XML output. """
+    
+    config_class = XMLDecoderConfig
+
     def __init__(self, config: XMLDecoderConfig):
-        super.__init__(config)
+        super().__init__(config)
         self.num_hiddens = config.num_hiddens
         self.num_blks = config.num_blks
 
         self.blks = nn.Sequential()
         self.pos_enc = PositionalEncoding(config.num_hiddens, config.dropout, max_len=1000)
-        self.embedding = nn.Embedding(self.vocab_size, config.num_hiddens)
+        self.embedding = nn.Embedding(config.vocab_size, config.num_hiddens)
         for i in range(self.num_blks):
-            self.blks.add_module(f"block{i}", XMLDecoderBlock(config.num_hiddens, config.ffn_hidden_size, config.num_heads, config.dropout))
-        self.dense = nn.Linear(self.num_hiddens, self.vocab_size)
+            self.blks.add_module(f"block{i}", XMLDecoderBlock(config.num_hiddens, config.ffn_hidden_size, config.num_heads, config.dropout, i))
+        self.dense = nn.Linear(self.num_hiddens, config.vocab_size)
 
     def init_state(self, enc_outputs, enc_valid_lens):
         return [enc_outputs, enc_valid_lens, [None] * self.num_blks]
@@ -121,3 +131,4 @@ class PositionalEncoding(nn.Module):
     def forward(self, X):
         X = X + self.P[:, :X.shape[1], :].to(X.device)
         return self.dropout(X)
+    
